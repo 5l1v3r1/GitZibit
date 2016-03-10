@@ -1,0 +1,27 @@
+.slider {
+  margin: auto;
+  width: 33%;
+}
+
+.section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+body {
+    background-color: #1E366A;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  font-size: 80px;
+}
+
+h2 {
+  color: white;
+  font-family: "Arial";
+  font-weight: normal;
+  font-size: 35px;
+}

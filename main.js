@@ -6,17 +6,24 @@ forked = true
 size = ["0kb","1kb","10kb","100kb","1mb","5mb","20mb","100mb","500mb","1gb"]
 query = ""
 
-$('document').ready(function() {
-  $('.nstSlider').nstSlider({
-    "left_grip_selector": ".leftGrip",
-    "value_bar_selector": ".bar",
-    "value_changed_callback": function(cause, leftValue, rightValue) {
-      var $container = $(this).parent(),
-      g = 255 - 127 + leftValue,
-      r = 255 - g,
-      b = 0;
-      $container.find('.leftLabel').text(leftValue);
-      $(this).find('.bar').css('background', 'rgb(' + [r, g, b].join(',') + ')');
-    }
+$(function() {
+   $( ".slider-ui" ).slider({
+     value:5,
+     min: 0,
+     max: 10,
+     step: 1,
+   });
+ });
+
+ $(function() {
+  $( "#stars-ui" ).slider({
+    range: true,
+    min: 0,
+    max: 10,
+    values: [4, 6]
   });
+});
+
+$(function() {
+  $( "#language-ui" ).menu();
 });

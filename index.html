@@ -2,18 +2,39 @@
 <html>
 <head>
 	<title>Gitzibit</title>
-	<link type="text/css" rel="stylesheet" href="jquery.nstSlider.min.css">
+	<link type="text/css" rel="stylesheet" href="main.css	">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="jquery-ui.theme.css">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="jquery.nstSlider.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<div class="nstSlider" data-range_min="-127" data-range_max="127"
-                       data-cur_min="80"     data-cur_max="0">
-
-    <div class="bar"></div>
-    <div class="leftGrip"></div>
+<h1>Gitzibit</h1>
+<div class="slider">
+	<div class="section" id="date">
+		<h2>Newness</h2>
+		<div class="slider-ui"></div>
+	</div>
+	<div class="section" id="stars">
+		<h2>Stars</h2>
+		<div class="slider-ui" id="stars-ui"></div>
+	</div>
+	<div class="section" id="language">
+		<h2>Language</h2>
+		<ul id="language-ui">
+			<li class="ui-state-highlight">Any</li>
+			<li>Javascript</li>
+			<li>C</li>
+			<li>C++</li>
+			<li>Python</li>
+			<li>PHP</li>
+		</ul>
+	</div>
+	<div class="section" id="size">
+		<h2>Project Size</h2>
+		<div class="slider-ui"></div>
+	</div>
 </div>
-<div class="leftLabel" />
 </body>
 </html>
