@@ -19,7 +19,7 @@ $(function() {
   $( "#stars-ui" ).slider({
     range: true,
     min: 0,
-    max: 10,
+    max: 9,
     values: [4, 6]
   });
 });
@@ -28,16 +28,16 @@ $(function() {
   $( "#language-ui" ).menu();
 });
 
+$(function() {
+  $("#newness").val("< " + date[$( "#newness-ui" ).slider( "value")+1]);
+  $("#newness-ui").slider({
+    slide: function( event, ui ) {
+      $("#newness").val("< " + date[$( "#newness-ui" ).slider( "value")]);
+      console.log($( "#newness-ui" ).slider( "value"));
+    }
+  })
+})
+
 function resizeInput() {
     $(this).attr('size', $(this).val().length);
 }
-
-// $(document).ready(function(){
-//   $('input[type="text"]').css({width:$(this).val().length})
-//   $('input').keydown(function(){
-//     var contents = $(this).val();
-//     var charlength = contents.length;
-//     newwidth =  charlength*25;
-//     $(this).css({width:newwidth});
-//   });
-// });
