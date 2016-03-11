@@ -27,3 +27,17 @@ $(function() {
 $(function() {
   $( "#language-ui" ).menu();
 });
+
+function resizeInput() {
+    $(this).attr('size', $(this).val().length);
+}
+
+// $(document).ready(function(){
+//   $('input[type="text"]').css({width:$(this).val().length})
+//   $('input').keydown(function(){
+//     var contents = $(this).val();
+//     var charlength = contents.length;
+//     newwidth =  charlength*25;
+//     $(this).css({width:newwidth});
+//   });
+// });

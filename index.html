@@ -10,18 +10,25 @@
 	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<h1>Gitzibit</h1>
+<div id="top-bar">
+	<h1>Gitzibit</h1>
+</div>
+
+<p>
+	Find GitHub projects to contribute to
+</p>
+
 <div class="slider">
 	<div class="section" id="date">
-		<h2>Newness</h2>
+		<input type="checkbox" checked="true" /><h2>Newness: </h2> <input type="text" id="amount" value="3">
 		<div class="slider-ui"></div>
 	</div>
 	<div class="section" id="stars">
-		<h2>Stars</h2>
+		<input type="checkbox" checked="true" /><h2>Stars: </h2> <input type="text" id="amount" value="3">
 		<div class="slider-ui" id="stars-ui"></div>
 	</div>
 	<div class="section" id="language">
-		<h2>Language</h2>
+		<input type="checkbox" checked="true" /><h2>Language: </h2> <input type="text" id="amount" value="3">
 		<ul id="language-ui">
 			<li class="ui-state-highlight">Any</li>
 			<li>Javascript</li>
@@ -32,7 +39,7 @@
 		</ul>
 	</div>
 	<div class="section" id="size">
-		<h2>Project Size</h2>
+		<input type="checkbox" checked="true" /><h2>Project Size: </h2> <input type="text" id="amount" value="3">
 		<div class="slider-ui"></div>
 	</div>
 </div>
