@@ -1,11 +1,13 @@
-.slider {
-  margin: auto;
-  width: 33%;
+#top-bar {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding-top: 0;
+  top: 0;
 }
 
-.section {
-  margin-top: 25px;
-  margin-bottom: 25px;
+.choices {
+  margin: auto;
+  width: 33%;
 }
 
 body {
@@ -28,18 +30,20 @@ h1 {
 
 h2 {
   color: #343434;
-  /*color: white;*/
   font-family: "Arial";
   font-weight: normal;
   font-size: 35px;
-  display: inline-block;
 }
 
+p {
+  text-align: center;
+  font-size: 30px;
+}
+
+
 input[type="checkbox"] {
-  display:inline-block;
   width:25px;
   height:25px;
-  margin-right: 10px;
 }
 
 input[type="text"] {
@@ -47,21 +51,27 @@ input[type="text"] {
   color:red;
   font-weight:bold;
   font-size: 30px;
-  display: inline-block;
   background-color: lightgrey;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
   padding: 5px;
 }
 
-#top-bar {
-  width: 100%;
-  background-color: #F5F5F5;
-  padding-top: 0;
-  top: 0;
+.block {
+  margin-bottom: 25px;
 }
 
-p {
-  text-align: center;
-  font-size: 30px;
+.checkbox {
+  display: table-cell;
+  padding-right: 10px;
+}
+
+.heading {
+  display: table-cell;
+  padding-right: 10px;
+}
+
+.input {
+  display: table-cell;
+  width: 100%;
 }
