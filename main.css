@@ -1,13 +1,26 @@
-.demo-list-three {
+/*.demo-list-three {
   width: 50%;
   margin: auto;
 }
 
 h3 {
   margin-left: 25%;
+}*/
+
+.mdl-cell {
+  background-color: lightgrey;
 }
 
-@media only screen and (max-width: 960px) {
+.padding-icons {
+  padding-right: 10px;
+}
+
+.heading-icons {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/*@media only screen and (max-width: 960px) {
   .demo-list-three {
     width: 100%;
     margin: auto;
@@ -15,5 +28,6 @@ h3 {
 
   h3 {
     margin-left: 0%;
+    padding-left: 10px;
   }
-}
+}*/
