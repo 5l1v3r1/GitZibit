@@ -2,59 +2,238 @@
 <html>
 <head>
 	<title>GitZibit</title>
-	<link type="text/css" rel="stylesheet" href="main.css	">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="jquery-ui.theme.css">
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="main.css	">
 	<script type="text/javascript" src="main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="top-bar">
-	<h1>GitZibit</h1>
-</div>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">GitZibit</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
+			<a href="#fixed-tab-3" class="mdl-layout__tab">Find</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Hot</a>
+			<a href="#fixed-tab-3" class="mdl-layout__tab">New</a>
+			<a href="#fixed-tab-3" class="mdl-layout__tab">Favorites</a>
 
-<p>
-	Find GitHub projects to contribute to
-</p>
-
-<div class="choices">
-	<div class="block">
-		<span class="checkbox"><input type="checkbox" checked="true" /></span>
-		<span class="heading"><h2>Newness:</h2></span>
-		<span class="input"><input type="text" value="3"></span>
-		<div class="slider-ui"></div>
-	</div>
-
-	<div class="block">
-		<span class="checkbox"><input type="checkbox" checked="true" /></span>
-		<span class="heading"><h2>Stars:</h2></span>
-		<span class="input"><input type="text" value="3"></span>
-		<div class="slider-ui" id="stars-ui"></div>
-	</div>
-
-	<div class="block">
-		<span class="checkbox"><input type="checkbox" checked="true" /></span>
-		<span class="heading"><h2>Language:</h2></span>
-		<span class="input"><input type="text" value="3"></span>
-		<ul id="language-ui">
-			<li class="ui-state-highlight">Any</li>
-			<li>Javascript</li>
-			<li>C</li>
-			<li>C++</li>
-			<li>Python</li>
-			<li>PHP</li>
-		</ul>
-	</div>
-
-	<div class="block">
-		<span class="checkbox"><input type="checkbox" checked="true" /></span>
-		<span class="heading"><h2>Size:</h2></span>
-		<span class="input"><input type="text" value="3"></span>
-		<div class="slider-ui"></div>
-	</div>
-
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">home</i>Home</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">search</i>Find</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">whatshot</i>Hot</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">new_releases</i>New</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">grade</i>Top</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">casino</i>Obscure</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">school</i>For Noobs</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">account_circle</i>Top Users</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">people</i>My Friends</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">favorite</i>Favorites</a>
+			<a class="mdl-navigation__link" href=""><i class="material-icons padding-icons">settings</i>Settings</a>
+		</nav>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content">
+				<!-- <h3>Hot Repositories</h3>
+				<ul class="demo-list-three mdl-list">
+				  <li class="mdl-list__item mdl-list__item--three-line">
+				    <span class="mdl-list__item-primary-content">
+				      <img class="material-icons  mdl-list__item-avatar" src="https://avatars2.githubusercontent.com/u/17015390?v=3&s=200" width="40px" />
+				      <span>Rochester-NRT / AlphaGo</span>
+				      <span class="mdl-list__item-text-body">
+				        A replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search," details of which can be found on their website.
+				      </span>
+				    </span>
+				  </li>
+				  <li class="mdl-list__item mdl-list__item--three-line">
+				    <span class="mdl-list__item-primary-content">
+				      <img class="material-icons  mdl-list__item-avatar" src="https://avatars3.githubusercontent.com/u/445208?v=3&s=460" width="40px" />
+				      <span>alexjc / neural-doodle</span>
+				      <span class="mdl-list__item-text-body">
+				        Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.
+				      </span>
+				    </span>
+				  </li>
+				  <li class="mdl-list__item mdl-list__item--three-line">
+				    <span class="mdl-list__item-primary-content">
+				      <img class="material-icons  mdl-list__item-avatar" src="https://avatars1.githubusercontent.com/u/6372053?v=3&s=200" width="40px" />
+				      <span>machinezone / tcpkali</span>
+				      <span class="mdl-list__item-text-body">
+				        Fast multi-core TCP and WebSockets load generator.
+				      </span>
+				    </span>
+				  </li>
+				</ul>
+				<h3>Repositories for Noobs</h3>
+				<ul class="demo-list-three mdl-list">
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars2.githubusercontent.com/u/17015390?v=3&s=200" width="40px" />
+							<span>Rochester-NRT / AlphaGo</span>
+							<span class="mdl-list__item-text-body">
+								A replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search," details of which can be found on their website.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars3.githubusercontent.com/u/445208?v=3&s=460" width="40px" />
+							<span>alexjc / neural-doodle</span>
+							<span class="mdl-list__item-text-body">
+								Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars1.githubusercontent.com/u/6372053?v=3&s=200" width="40px" />
+							<span>machinezone / tcpkali</span>
+							<span class="mdl-list__item-text-body">
+								Fast multi-core TCP and WebSockets load generator.
+							</span>
+						</span>
+					</li>
+				</ul>
+				<h3>Top Repositories</h3>
+				<ul class="demo-list-three mdl-list">
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars2.githubusercontent.com/u/17015390?v=3&s=200" width="40px" />
+							<span>Rochester-NRT / AlphaGo</span>
+							<span class="mdl-list__item-text-body">
+								A replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search," details of which can be found on their website.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars3.githubusercontent.com/u/445208?v=3&s=460" width="40px" />
+							<span>alexjc / neural-doodle</span>
+							<span class="mdl-list__item-text-body">
+								Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars1.githubusercontent.com/u/6372053?v=3&s=200" width="40px" />
+							<span>machinezone / tcpkali</span>
+							<span class="mdl-list__item-text-body">
+								Fast multi-core TCP and WebSockets load generator.
+							</span>
+						</span>
+					</li>
+				</ul>
+				<h3>Obscure Repositories</h3>
+				<ul class="demo-list-three mdl-list">
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars2.githubusercontent.com/u/17015390?v=3&s=200" width="40px" />
+							<span>Rochester-NRT / AlphaGo</span>
+							<span class="mdl-list__item-text-body">
+								A replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search," details of which can be found on their website.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars3.githubusercontent.com/u/445208?v=3&s=460" width="40px" />
+							<span>alexjc / neural-doodle</span>
+							<span class="mdl-list__item-text-body">
+								Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars1.githubusercontent.com/u/6372053?v=3&s=200" width="40px" />
+							<span>machinezone / tcpkali</span>
+							<span class="mdl-list__item-text-body">
+								Fast multi-core TCP and WebSockets load generator.
+							</span>
+						</span>
+					</li>
+				</ul>
+				<h3>Repositories maintained by Top Users</h3>
+				<ul class="demo-list-three mdl-list">
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars2.githubusercontent.com/u/17015390?v=3&s=200" width="40px" />
+							<span>Rochester-NRT / AlphaGo</span>
+							<span class="mdl-list__item-text-body">
+								A replication of DeepMind's 2016 Nature publication, "Mastering the game of Go with deep neural networks and tree search," details of which can be found on their website.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars3.githubusercontent.com/u/445208?v=3&s=460" width="40px" />
+							<span>alexjc / neural-doodle</span>
+							<span class="mdl-list__item-text-body">
+								Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.
+							</span>
+						</span>
+					</li>
+					<li class="mdl-list__item mdl-list__item--three-line">
+						<span class="mdl-list__item-primary-content">
+							<img class="material-icons  mdl-list__item-avatar" src="https://avatars1.githubusercontent.com/u/6372053?v=3&s=200" width="40px" />
+							<span>machinezone / tcpkali</span>
+							<span class="mdl-list__item-text-body">
+								Fast multi-core TCP and WebSockets load generator.
+							</span>
+						</span>
+					</li>
+				</ul> -->
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				  <div class="mdl-cell mdl-cell--1-col">1</div>
+				</div>
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--4-col">4</div>
+				  <div class="mdl-cell mdl-cell--4-col">4</div>
+				  <div class="mdl-cell mdl-cell--4-col">4</div>
+				</div>
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--6-col">6</div>
+				  <div class="mdl-cell mdl-cell--4-col">4</div>
+				  <div class="mdl-cell mdl-cell--2-col">2</div>
+				</div>
+				<div class="mdl-grid">
+				  <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">6 (8 tablet)</div>
+				  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet">4 (6 tablet)</div>
+				  <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">2 (4 phone)</div>
+				</div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
 </div>
 </body>
 </html>
