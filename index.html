@@ -23,10 +23,10 @@
     <!-- Tabs -->
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
       <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Home</a>
-			<a href="#fixed-tab-3" class="mdl-layout__tab">Find</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Hot</a>
-			<a href="#fixed-tab-3" class="mdl-layout__tab">New</a>
-			<a href="#fixed-tab-3" class="mdl-layout__tab">Favorites</a>
+			<a href="#fixed-tab-2" class="mdl-layout__tab">Find</a>
+      <a href="#fixed-tab-3" class="mdl-layout__tab">Hot</a>
+			<a href="#fixed-tab-4" class="mdl-layout__tab">New</a>
+			<a href="#fixed-tab-5" class="mdl-layout__tab">Favorites</a>
 
     </div>
   </header>
@@ -49,15 +49,44 @@
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content">
-				<div class="mdl-grid">
-					
+				<!-- Welcome Stuff -->
+				<h1>Welcome!</h1>
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--stretch" style="margin: auto;">
+					<p id="welcome-paragraph">
+						This is GitZibit; an exhibition of all things Git.
+						<br><br>
+						You should use this website to find projects that interest you, and that you can contribute to.
+						<br><br>
+						This webpage provides a sample of different projects. You can view more entries by choosing an option from the menu.
+						<br><br>
+						If you you're looking for something tailored to your experience or interests, choose the 'find' tab to specify more options.
+					</p>
 				</div>
+
+				<h2>Top repos</h2>
+				<div class="mdl-grid" id="main-top"></div>
+				<h2>Hot repos</h2>
+				<div class="mdl-grid" id="main-hot"></div>
+				<h2>Obscure repos</h2>
+				<div class="mdl-grid" id="main-obscure"></div>
+				<h2>My friend's repos</h2>
+				<div class="mdl-grid" id="main-friends"></div>
 			</div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
+
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <div class="page-content">
+				<div class="mdl-grid" id="hot"></div>
+			</div>
+    </section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-4">
+      <div class="page-content">
+				<div class="mdl-grid" id="new"></div>
+			</div>
+    </section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-5">
       <div class="page-content"><!-- Your content goes here --></div>
     </section>
   </main>
