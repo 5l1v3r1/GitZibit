@@ -37,6 +37,16 @@ data =
   }
 ]
 
+function convert() {
+    var descriptions = document.getElementsByClassName("description");
+    for (var i = 0; i < descriptions.length; i++){
+      var input = descriptions[i].innerHTML
+      console.log(input)
+      var output = emojione.shortnameToImage(input);
+      descriptions[i].innerHTML = output;
+    }
+}
+
 function shuffle(o) {
 	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 	return o;
@@ -55,7 +65,7 @@ function insertCard(results, gridName){
             </div>\
           </h4>\
         </div>\
-        <div class="mdl-card__supporting-text">\
+        <div class="mdl-card__supporting-text description">\
           ' + results[i]["description"] + '\
         </div>\
         <div class="mdl-card__actions mdl-card--border">\
@@ -75,6 +85,7 @@ function insertCard(results, gridName){
 $.get( "https://api.github.com/search/repositories", { q: "created:>=2016-02-14", sort: "stars" }, function( data ) {
   results = shuffle(data["items"].slice(0,parseInt(data["items"].length / 3))).slice(0,6)
   insertCard(results, "#main-top")
+  convert()
 });
 
 $.get( "https://api.github.com/search/repositories", { q: "created:>=2016-03-11", sort: "stars" }, function( data ) {
@@ -82,13 +93,16 @@ $.get( "https://api.github.com/search/repositories", { q: "created:>=2016-03-11"
   insertCard(results, "#hot")
   results = shuffle(data["items"].slice(0,parseInt(data["items"].length / 3))).slice(0,6)
   insertCard(results, "#main-hot")
+  convert()
 });
 
 $.get( "https://api.github.com/search/repositories", { q: "stars:10..50", sort: "updated" }, function( data ) {
   results = shuffle(data["items"].slice(0,parseInt(data["items"].length / 3))).slice(0,6)
   insertCard(results, "#main-obscure")
+  convert()
 });
 
-$.get( "https://api.github.com/search/repositories", {q: sort: "updated" }, function( data ) {
+$.get( "https://api.github.com/search/repositories", {sort: "updated" }, function( data ) {
   insertCard(data["items"], "#new")
+  convert()
 });
