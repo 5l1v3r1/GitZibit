@@ -7,18 +7,89 @@ h3 {
   margin-left: 25%;
 }*/
 
-.mdl-cell {
-  background-color: lightgrey;
+h1 {
+  text-align: center;
 }
+
+#welcome-paragraph {
+  font-size: 24px;
+  margin
+}
+
+h2 {
+  padding-left: 12px;
+}
+
+.demo-card-wide.mdl-card {
+  width: 100%;
+  margin: auto;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('images/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+ a {
+   text-decoration: none;
+ }
 
 .padding-icons {
   padding-right: 10px;
 }
 
-.heading-icons {
-  font-size: 40px;
-  margin-bottom: 10px;
+.demo-card-event.mdl-card {
+  width: 100%;
 }
+
+.mdl-card__title{
+  position: relative;
+}
+
+.card-avatars{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-icons{
+  padding-left: 20px;
+  padding-right: 8px;
+  font-size: 24px;
+}
+
+.demo-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+
+.mdl-card--border{
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.mdl-card__title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/*@media only screen and (max-width: 960px) {
+  .mdl-layout__tab-bar{
+    visibility: hidden;
+  }
+}*/
+
 
 /*@media only screen and (max-width: 960px) {
   .demo-list-three {
