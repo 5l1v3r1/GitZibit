@@ -4,44 +4,11 @@ big = [0,1,3,5,10,20,50,100,500,1000]
 language = []
 forked = true
 size = ["0kb","1kb","10kb","100kb","1mb","5mb","20mb","100mb","500mb","1gb"]
-query = ""
-
-data =
-[
-  {
-    user: "alexjc",
-    avatar: "https://avatars3.githubusercontent.com/u/445208?v=3&s=460",
-    project: "neural-doodle",
-    date: "Mar 29, 2015",
-    description: "Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer.",
-    stars: "11,865",
-    size: "15KB"
-  },
-  {
-    user: "machinezone",
-    avatar: "https://avatars1.githubusercontent.com/u/6372053?v=3&s=200",
-    project: "tcpkali",
-    date: "Jan 4, 2016",
-    description: "Fast multi-core TCP and WebSockets load generator.",
-    stars: "1,905",
-    size: "11MB"
-  },
-  {
-    user: "Rochester-NRT",
-    avatar: "https://avatars2.githubusercontent.com/u/17015390?v=3&s=200",
-    project: "AlphaGo",
-    date: "Feb 6, 2016",
-    description: "A replication of DeepMind's 2016 Nature publication, \"Mastering the game of Go with deep neural networks and tree search,\" details of which can be found on their website.",
-    stars: "3,921",
-    size: "204KB"
-  }
-]
 
 function convert() {
     var descriptions = document.getElementsByClassName("description");
     for (var i = 0; i < descriptions.length; i++){
       var input = descriptions[i].innerHTML
-      console.log(input)
       var output = emojione.shortnameToImage(input);
       descriptions[i].innerHTML = output;
     }

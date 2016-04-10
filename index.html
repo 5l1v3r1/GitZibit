@@ -9,14 +9,14 @@
 	<script defer src="https://code.getmdl.io/1.1.2/material.min.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="//cdn.jsdelivr.net/emojione/2.1.2/lib/js/emojione.min.js"></script>
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/2.1.2/assets/css/emojione.min.css"/>	
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/emojione/2.1.2/assets/css/emojione.min.css"/>
 	<link type="text/css" rel="stylesheet" href="main.css	">
 	<script type="text/javascript" src="main.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -29,6 +29,7 @@
       <a href="#fixed-tab-3" class="mdl-layout__tab">Hot</a>
 			<a href="#fixed-tab-4" class="mdl-layout__tab">New</a>
 			<a href="#fixed-tab-5" class="mdl-layout__tab">Favorites</a>
+			<a href="#fixed-tab-6" class="mdl-layout__tab">Help</a>
 
     </div>
   </header>
@@ -51,20 +52,6 @@
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content">
-				<!-- Welcome Stuff -->
-				<h1>Welcome!</h1>
-				<div class="mdl-cell mdl-cell--4-col mdl-cell--stretch" style="margin: auto;">
-					<p id="welcome-paragraph">
-						This is GitZibit; an exhibition of all things Git.
-						<br><br>
-						You should use this website to find projects that interest you, and that you can contribute to.
-						<br><br>
-						This webpage provides a sample of different projects. You can view more entries by choosing an option from the menu.
-						<br><br>
-						If you you're looking for something tailored to your experience or interests, choose the 'find' tab to specify more options.
-					</p>
-				</div>
-
 				<h2>Top repos</h2>
 				<div class="mdl-grid" id="main-top"></div>
 				<h2>Hot repos</h2>
@@ -91,6 +78,24 @@
 		<section class="mdl-layout__tab-panel" id="fixed-tab-5">
       <div class="page-content"><!-- Your content goes here --></div>
     </section>
+		<section class="mdl-layout__tab-panel" id="fixed-tab-6">
+      <div class="page-content">
+				<!-- Welcome Stuff -->
+				<h1>Welcome!</h1>
+				<div class="mdl-cell mdl-cell--6-col mdl-cell--stretch" style="margin: auto;">
+					<p id="welcome-paragraph">
+						This is GitZibit; an exhibition of all things Git.
+						<br><br>
+						You should use this website to find projects that interest you, and that you can contribute to.
+						<br><br>
+						The home tab provides a sample of different projects. You can view more entries by choosing an option from the menu.
+						<br><br>
+						If you you're looking for something tailored to your experience or interests, choose the 'find' tab to specify more options.
+					</p>
+				</div>
+			</div>
+    </section>
+
   </main>
 </div>
 </body>
